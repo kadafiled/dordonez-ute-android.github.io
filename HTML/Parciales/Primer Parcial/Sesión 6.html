@@ -38,7 +38,7 @@
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
-				<a class="navbar-brand">
+				<a class="navbar-brand" href="../../../Index.html">
 					<img src="../../../IMG/Logo.png"alt="" width="100" height="100"/>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,14 +91,78 @@
 			<div class="row">
 				<div class>
 				  <div class="inner-column">
-						<h1><span>Título:</span></h1>
-					<h4>Subtítulo:</h4>
-						<p>Contenido:</p>
+						<h1><span>Creación de Diseños con un Adaptador:</span></h1><br/>
 					</div>
 				</div>
 			</div>
+          
+            <!-- Texto izquierda -->
+            <div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+  <div class="inner-column">
+    <p align="justify">Cuando el contenido de tu diseño sea  dinámico o no sea predeterminado, puedes usar un diseño con la subclase <strong><em>AdapterView</em></strong> para completar el diseño con vistas durante el tiempo de ejecución. Una subclase de la clase <strong><em>AdapterView</em></strong> usa un <strong><em>Adapter</em></strong> para enlazar datos con su diseño. <strong><em>Adapter</em></strong> se  comporta como intermediario entre la fuente de datos y el diseño <strong><em>AdapterView</em></strong>. <strong><em>Adapter</em></strong> recupera  los datos <em>(de una fuente como una matriz o una consulta a la base de datos) </em>y  convierte cada entrada en una vista que puedes agregar al diseño <strong><em>AdapterView</em></strong>.</p>
+					<p align="justify"><strong><em>Los diseños comunes respaldados por un  adaptador incluyen:</em></strong>				  </p>
+					<p align="justify"><strong>· Vista de Lista: </strong>Muestra una sola lista de columnas desplazable.</p>
+                    <p align="justify"><img src="../../../IMG/Consulta 2 (1).png" alt="" width="200" height="200"></p>
+                    <p align="justify"><strong>· Vista de Cuadrícula: </strong>Muestra una cuadrícula desplazable de  columnas y filas.<strong></strong></p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (2).png" alt="" width="200" height="200"></p></br>
+    
+    <h2><strong>Relleno de una Vista del Adaptador con Datos:</strong></h2>
+    <p align="justify">Puedes completar una <strong><em>AdapterView</em></strong>,  como <strong><em>ListView</em></strong> o <strong><em>GridView</em></strong>, enlazando la instancia <strong><em>AdapterView</em></strong> con un <strong><em>Adapter</em></strong>, que recupera datos de una fuente externa y crea  una View que representa cada entrada de datos. Android proporciona varias  subclases de <strong><em>Adapter</em></strong> que resultan útiles para recuperar  diferentes tipos de datos y generar vistas para una <strong><em>AdapterView</em></strong>.  Los dos adaptadores más comunes son los siguientes:</p></br>
+    <p align="justify"><strong>· ArrayAdapter:</strong></p>
+    <p align="justify">Usa este adaptador cuando la fuente de  datos sea una matriz. Según la configuración predeterminada, <strong><em>        ArrayAdapter</em></strong> crea una vista para cada elemento de la matriz llamando a <strong><em>toString()</em></strong> en cada elemento y disponiendo los contenidos en una <strong><em>TextView</em></strong>.<strong></strong></p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (3).png" alt="" width="950" height="107"></p>
+    <p align="justify">Los argumentos para este constructor son los siguientes:</p>
+    <p align="justify">· El <strong><em>Context</em></strong> de tu aplicación.<br>
+      · El diseño que contiene una <strong><em>TextView</em></strong> para cada <strong><em>string</em></strong> de la matriz.<br>
+      · La matriz de <strong><em>strings.</em></strong><br>
+      Luego, simplemente, llama a <strong><em>setAdapter()</em></strong> en tu <strong><em>ListView</em></strong>:</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (4).png" alt="" width="947" height="93"></p></br>
+    <p align="justify"><strong>· SimpleCursorAdapter:</strong><br>
+    Usa este adaptador cuando tus  datos provengan de un Cursor. Cuando uses <strong><em>SimpleCursorAdapter</em></strong>,  debes especificar un diseño para cada fila en el Cursor y qué columnas de  Cursor se deben insertar en qué vistas del diseño.</p>
+    <p>Por ejemplo, si deseas crear una  lista de nombres y números de teléfono de personas, puedes realizar una  consulta que muestre un <strong><em>Cursor</em></strong> con una fila para cada persona y  columnas para los nombres y los números. Luego, crearás una matriz de <strong><em>strings</em></strong> que especifique las columnas del Cursor que desees en el diseño para cada  resultado y una matriz con valores enteros que especifique las vistas  correspondientes en las que se deba colocar cada columna:</p>
+    <p><img src="../../../IMG/Consulta 2 (5).png" alt="" width="946" height="124"></p>
+    <p align="justify">Cuando crees una instancia del <strong><em>SimpleCursorAdapter</em></strong>,  pasa el diseño que se debe usar para cada resultado, el Cursor que contiene los  resultados y estas dos matrices:</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (6).png" alt="" width="951" height="149"></p>
+    <p align="justify">Luego, el <strong><em>SimpleCursorAdapter</em></strong> crea una vista  para cada fila en el Cursor usando el diseño proporcionado al insertar cada  elemento <strong><em>fromColumns</em></strong> en la vista <strong><em>toViews</em></strong> correspondiente.</p></br></br>
+    <h2><strong>Cómo Manejar Eventos de Clic:</strong></h2>
+    <p align="justify">Puedes responder a eventos de clic en cada elemento de una <strong><em>AdapterView</em></strong> al implementar la interfaz <strong><em>AdapterView.OnItemClickListener</em></strong>. Por  ejemplo:</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (7).png" alt="" width="1004" height="246"></p></br></br>
+    <h2 align="justify"><strong>Vista de Lista:</strong></h2>
+    <p align="justify"><strong><em>ListView</em></strong> es un  grupo de vistas que muestra una lista de elementos desplazables. Los elementos  de la lista se insertan automáticamente en la lista mediante un <strong><em>Adapter</em></strong> que extrae el contenido de una fuente, como una matriz o una consulta de base  de datos, y convierte el resultado de cada elemento en una vista que se coloca  en la lista.</p></br></br>
+    <h2><strong>Usar un Cargador:</strong></h2>
+    <p align="justify">El uso de un <strong><em>CursorLoader</em></strong> es el método convencional para consultar un Cursor como una tarea asincrónica,  para evitar que la consulta bloquee el subproceso principal de tu app. Cuando <strong><em>CursorLoader</em></strong> recibe el resultado de Cursor, <strong><em>LoaderCallbacks</em></strong> recibe un <strong><em>callback</em></strong> para <strong><em>onLoadFinished()</em></strong>, que es el punto en el cual actualizas tu <strong><em>Adapter</em></strong> con el nuevo Cursor, y luego la vista de lista muestra los resultados.</p></br></br>
+    <h2><strong>GridView:</strong></h2>
+    <p align="justify">Similar a la clase <strong><em>ListView</em></strong>,  la clase <strong><em>GridView</em></strong> emplea un <strong><em>Adapter</em></strong> y muestra los  elementos en múltiples columnas en la pantalla.</p></br></br>
+    <h2><strong>Controles de Números:</strong></h2>
+    <p align="justify">Los controles de números ofrecen  una manera rápida de seleccionar un valor de un conjunto. En el estado  predeterminado, un control de números muestra su valor actualmente  seleccionado. Al tocar el control de números, se muestra un menú desplegable  con todos los demás valores disponibles, de los cuales el usuario puede  seleccionar uno.</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (8).png" alt="" width="352" height="306"></p>
+    <p align="justify">Puedes agregar un control de  número a tu diseño con el objeto <strong><em>Spinner</em></strong>. Por lo general, debes  hacerlo en tu diseño <strong><em>XML</em></strong> con un elemento <strong><em>&lt;Spinner&gt;</em></strong>.  Por ejemplo:</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (9).png" alt="" width="999" height="149"></p>
+    <p align="justify">Para rellenar el control de  número con una lista de opciones, debes especificar un <strong><em>SpinnerAdapter</em></strong> en tu código fuente de la <strong><em>Activity</em></strong> o el <strong><em>Fragment</em></strong>.</p>
+    <p align="justify">Las clases principales son  las siguientes:</p>
+    <p align="justify"><strong>· Spinner</strong><br>
+      <strong>· SpinnerAdapter</strong><br>
+    <strong>· AdapterView.OnItemSelectedListener</strong></p></br></br>
+    <h2><strong>Relleno del Control de Números  con las Elecciones del Usuario:</strong></h2>
+    <p align="justify">Las opciones que proporciones  para el control de números pueden provenir de cualquier fuente, pero deben  brindarse mediante un <strong><em>SpinnerAdapter</em></strong> <em>(como un ArrayAdapter)</em> si están disponibles en una matriz o mediante un <strong><em>CursorAdapter</em></strong> si  están disponibles a partir de una consulta de la base de datos. Por ejemplo, si  las opciones disponibles para tu control de números son predeterminadas, puedes  proporcionarlas con una matriz de <strong><em>strings</em></strong> definida en un archivo  de recursos de <strong><em>strings</em></strong>:</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (10).png" alt="" width="1003" height="368"></p>
+    <p align="justify">El método <strong><em>createFromResource() </em></strong>te permite crear un <strong><em>ArrayAdapter</em></strong> a partir de la matriz de  strings. El tercer argumento para este método es un recurso de diseño que  define la manera en que se muestra la opción seleccionada en la supervisión del  control de números. </p>
+    <p align="justify">Luego, debes llamar a <strong><em>setDropDownViewResource(int)</em></strong> para especificar el diseño que debe usar el adaptador a fin de mostrar la lista  de elecciones del control de números <em>(simple_spinner_dropdown_item es otro  diseño estándar definido por la plataforma)</em>.</p>
+    <p align="justify">Llama a <strong><em>setAdapter()</em></strong> para aplicar el adaptador  a tu <strong><em>Spinner</em></strong>.</p></br></br>
+    <h2><strong>Respuesta a las Selecciones del Usuario:</strong></h2>
+    <p align="justify">Cuando un usuario selecciona un  elemento de menú desplegable, el objeto <strong><em>Spinner</em></strong> recibe un evento  en relación con el elemento seleccionado.</p>
+    <p align="justify">Para definir el controlador del  evento de selección de un control de números, implementa la interfaz <strong><em>AdapterView.OnItemSelectedListener</em></strong> y el método de devolución de llamada <strong><em>onItemSelected() </em></strong>correspondiente.  Por ejemplo, esta es una implementación de la interfaz en una <strong><em>Activity</em></strong>:</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (11).png" alt="" width="997" height="368"></p>
+    <p align="justify"><strong><em>AdapterView.OnItemSelectedListener</em></strong> requiere los métodos de devolución de llamada <strong><em>onItemSelected()</em></strong> y <strong><em>onNothingSelected()</em></strong>.</p>
+    <p align="justify">Luego, debes especificar la  implementación de la interfaz; para ello, llama a <strong><em>setOnItemSelectedListener()</em></strong>:</p>
+    <p align="justify"><img src="../../../IMG/Consulta 2 (12).png" alt="" width="999" height="95"></p>
+    <p align="justify">Si implementas la interfaz <strong><em>AdapterView.OnItemSelectedListener</em></strong> con tu <strong><em>Activity</em></strong> o <strong><em>Fragment</em></strong> <em>(como en el ejemplo  anterior)</em>, puedes pasar <strong><em>this</em></strong> como la instancia de la  interfaz. </p>
+		</div>      
+			</div>
 		</div>
 	</div>
+</div>
 	<!-- End About -->
 	
 	<!-- Start Footer -->
