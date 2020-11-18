@@ -32,7 +32,7 @@
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
-				<a class="navbar-brand">
+				<a class="navbar-brand" href="../../../../../index.html">
 					<img src= "../../../../../IMG/Logo.png" width="100" height="100"/>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@
 				<div class="col-lg-12">
 					<h1>Desarrollo de Sistemas II</h1>
                     </br>
-                    <h1>Nombre Consulta</h1>
+                    <h1>Consulta 2: Intents y Filtros de Intents</h1>
 				</div>
 			</div>
 		</div>
@@ -85,13 +85,400 @@
 			<div class="row">
 				<div class>
 				  <div class="inner-column">
-						<h1><span>Título:</span></h1>
-					<h4>Subtítulo:</h4>
-						<p>Contenido:</p>
+						<h1><span>Título: Intents y Filtros de Intents</span></h1> <br/> <br/> <br/>
+		
 					</div>
 				</div>
 			</div>
+            
+            <!-- Texto izquierda -->
+            <div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+						<img src="../../../../../IMG/ImgGrupo2/Consulta2_Img1.PNG"  align="center" width="400px" height="300px">	
+                        <br/>
+                        <br/>
+                        <br/>
+                        <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img3.PNG"  align="center" width="400px" height="300px">	
+                        		
+					</div>
+				</div> 	
+                
+                <!-- Texto Derecha -->
+
+                <div class="col-lg-6 col-md-12 col-sm-12  text-center">
+                	<div class="inner-column">
+                    
+                	<h2 align="left"><strong>Definición</strong></h2>
+						<p align="justify">Es un objeto de acción que se utiliza para solicitar una acción de otro componente de la aplicación.</p> 
+                        <p align="justify">Facilitan la comunicación entre los componentes de diferentes maneras de las cuales se detallan tres casos de usos fundamentales: 
+                        </p>                  
+                        
+                        <ul>
+                        	<li><p align="justify"><strong>• &nbsp Para comenzar una actividad: </strong> Para iniciar una nueva instancia de una actividad se pasa 
+                            un objeto Intent a startActivity(). El objeto de acción Intent describe la actividad que debe iniciarse con sus respectivos datos. Si 
+                            se desea recibir el estado de una actividad se utiliza <strong>startActivityForResult().</strong> </p></li>
+                            
+                            <li><p align="justify"><strong>• &nbsp Para iniciar un servicio: </strong>  Para iniciar un servicio de operación única se debe 
+                            pasar un intent a startService(), de este modo el intent describe el servicio que se debe iniciar  con los datos necesarios. </p></li> 
+                            
+                            <li><p align="justify"><strong>• &nbsp Para entregar un mensaje: </strong> Para enviar mensajes a otras apps se debe pasar un Intent
+                             a <strong>sendBradcast(), sendOrderedBroadcast() o sendStickyBroadcast().</strong> </p></li> 
+                        </ul> 
+                        
+                	</div>	
+                    				
+                </div>
+
+            	<!-- Texto derecha fin -->
+                
+			</div>
+            
+            <br/>
+            
+			<!-- Seccion fin izquierda texto -->
+            
+            
+            
+            
+            
+            <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+            
+            <hr style="size:4px" color="black" />
+            
+            <br/>
+            
+            <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+            
+            
+             <!-- Texto izquierda -->
+            <div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+						<h2 align="left"><strong>Tipos de Intents</strong></h2>
+                        <br/>
+                        <p align="justify"><strong>Intents Explícitas</strong></p>
+						<p align="justify">Se indica  exactamente  el  componente  a  lanzar.  Su utilización típica  es  la  de  ir  ejecutando  los  diferentes 
+                        componentes    internos    de    una    aplicación.    Por    ejemplo,  desde    la    actividad MainActivity lanzamos AcercaDeActivity por 
+                        medio de un Intent explícito.</p>
+                        
+                        <p align="justify"><strong>Ejemplo: </strong></p>
+                        
+                        </div>
+                                                  
+                        <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img4.PNG"  align="center" width="450px" height="150px">
+                        
+					
+				</div> 	
+                
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center">					
+
+						<div class="inner-column">
+						<br/>
+                        <br/>
+                        <p align="justify"><strong>Intents Implícitas</strong></p>
+						<p align="justify">Pueden solicitar tareas abstractas, como “quiero tomar una foto” o “quiero enviar un mensaje”. Además las intenciones  se  
+                        resuelven  en  tiempo  de  ejecución,  de  forma  que  el  sistema  mirará  cuantos  componentes  han registrado la posibilidad de ejecutar ese 
+                        tipo de Intent. Si encuentra varias el sistema puede preguntar al usuario el componente que prefiere utilizar. </p>
+                        
+                        <p align="justify"><strong>Ejemplo: </strong></p>
+                        
+                        </div>
+                        
+                        <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img5.PNG"  align="center" width="400px" height="150px">
+                                                                  
+					  
+                                      				
+				</div> 	
+                            
+ 
+			</div>
+			<!-- Seccion fin izquierda texto -->
+            
+            
+            
+            <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+                
+            <br/>           
+            <hr style="size:4px" color="black" />
+            <br/>
+            
+            <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+            
+                         <div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+						<h1 align="left"><strong>SEGUNDA PARTE  ------> GRACE <-------- </strong></h1>
+						<p align="justify"></p>                                   
+                        
+					</div>
+				</div>
+                
+                <div class="col-lg-6 col-md-12 col-sm-12  text-center">
+                    
+ 
+                                        
+                </div>
+                          				
+                        
 		</div>
+        
+        <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+        
+            <br/>           
+            <hr style="size:4px" color="black" />
+            <br/>
+            
+        <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+            
+            
+            
+            <!-- Texto izquierda -->
+            <div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+						<h2 align="left"><strong>Resolución de Intents</strong></h2>
+						<p align="justify">Cuando el sistema recibe una intent implícita para iniciar una actividad, busca la mejor actividad para la intent mediante 
+                        la comparación de la intent con los filtros de intents basándose en tres aspectos:</p>    
+                        
+                        <ul>
+                        	<li><p align="justify"><strong>• &nbsp </strong> Acción </p></li>
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Datos (tanto URI como tipo de datos)  </p></li> 
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Categoría </p></li> 
+                        </ul>               
+                                               	
+					</div>
+				</div> 	
+                
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+
+						<ul>
+                        	<img src="../../../../../IMG/ImgGrupo2/Consulta2_Img6.PNG"  align="center" width="400px" height="330px">
+                        </ul>
+                        			
+				</div> 	
+                
+                <!-- Texto Derecha -->
+
+                <div class="col-lg-6 col-md-12 col-sm-12  text-center">
+                    
+                    <div class="inner-column">
+                    	
+                        <br/>
+						<p align="justify"><strong>Prueba de Acción</strong></p>
+						<p align="justify">Para especificar las acciones de intents aceptadas, un filtro de intents puede declarar 
+                        un número de elementos <action> de cero en adelante. Para pasar el filtro, la acción especificada en la 
+                        Intent debe coincidir con una de las acciones indicadas en el filtro.</p>    
+                        
+                     </div>
+                        <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img7.PNG"  align="center" width="400px" height="150px">
+                        	
+					
+                </div>
+                
+                        
+                <!-- Texto Derecha fin -->
+                
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+                    
+                    	<br/>
+                    	<p><strong>Prueba de Categoría </strong></p>
+                    
+                    	<p align="justify">Para especificar las categorías de intents aceptadas, un filtro de intents puede declarar un 
+                    	número de elementos <category> de cero en adelante. Para que una intent pase una prueba de categoría, cada categoría 
+                    	en la Intent debe coincidir con la categoría que figura en el filtro.</p>
+                    
+                    </div>
+                    
+                    <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img8.PNG"  align="center" width="430px" height="150px">
+                        						
+				</div> 	
+                
+                <!-- Texto Derecha -->
+                
+
+                <div class="col-lg-6 col-md-12 col-sm-12  text-center">
+                    
+                    <div class="inner-column">
+                    	
+                        <br/>
+						<p align="justify"><strong>Prueba de Datos</strong></p>
+						<p align="justify">Para especificar los datos de intents que se aceptan, un filtro de intents puede declarar 
+                        un número de elementos <data> de cero en adelante. Cada elemento (data) puede especificar una estructura de 
+                        URI y un tipo de datos (tipo de contenido multimedia de MIME).</p>    
+                        
+                        <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img9.PNG"  align="center" width="450px" height="150px">
+                        	
+					</div>
+                </div>
+                
+                        
+                <!-- Texto Derecha fin -->
+                
+                               
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					
+                    <br/>
+                    <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img10.PNG"  align="center" width="430px" height="300px">
+                        					
+				</div> 
+                
+                                <!-- Texto Derecha -->
+
+                <div class="col-lg-6 col-md-12 col-sm-12  text-center">
+                    
+                    <div class="inner-column">
+                    	
+                        <br/>
+                        <h2 align="left"><strong>Dependencias</strong></h2>
+						<p align="justify"><strong>URI</strong></p>
+                        
+						<ul>
+                        	<li><p align="justify"><strong>• &nbsp </strong> Si no se especifica el esquema, se ignora el host. </p></li>
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Si el host no se especifica, se ignora el puerto.</p></li> 
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Si no se especifican el esquema ni el host, se ignora la ruta de acceso.</p></li> 
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Si un filtro especifica únicamente un esquema, todos los URI con ese esquema coinciden 
+                            con el filtro.</p></li>
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Si un filtro especifica un esquema y una autoridad, pero no una ruta de acceso, 
+                            todos los URI con el mismo esquema y autoridad pasan el filtro, independientemente de la ruta que tengan.</p></li> 
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Si un filtro especifica un esquema, una autoridad y una ruta de acceso, solo los URI con el 
+                            mismo esquema, autoridad y ruta pasan el filtro.</p></li> 
+                        </ul>  
+                        
+                     </div>                      				
+                </div>
+                
+                        
+                <!-- Texto Derecha fin -->
+                
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+                    
+                    	<br/>
+                        <br/>
+                    	<p><strong>URI y MIME</strong></p>
+                    
+                    	<ul>
+                        	<li><p align="justify"><strong>• &nbsp </strong> Una intent que no contiene ni un URI ni un tipo de MIME 
+                            pasa la prueba solo si el filtro no especifica ningún URI ni tipo de MIME.</p></li>
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Si una intent contiene un URI, pero no un tipo de MIME, 
+                            pasa la prueba solo si el URI coincide con el formato de URI del filtro.</p></li> 
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> Si una intent contiene un tipo de MIME, pero no un URI, pasa 
+                            la prueba solo si el filtro enumera el mismo tipo de MIME y no especifica un formato de URI.</p></li> 
+                            
+                            <li><p align="justify"><strong>• &nbsp </strong> 	Una intent que contiene tanto un URI como un tipo de MIME, 
+                            pasa la parte de tipo de MIME de la prueba solo si ese tipo coincide con el enumerado en el filtro. Pasa la parte 
+                            del URI de la prueba si este coincide con un URI del filtro.</p></li>
+                            
+                        </ul>
+                    
+                    </div>
+                        						
+				</div> 	
+                
+                <!-- Texto Derecha -->
+                
+			</div>
+            
+            
+			<!-- Seccion fin izquierda texto -->
+            
+            
+            <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+            
+            <br/>
+            <hr style="size:4px" color="black" />
+            <br/>
+            
+            <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+            
+            
+           
+                     
+            
+             <div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+						<h2 align="left"><strong>Intents Comunes</strong></h2>
+						<p align="justify">Una intent permite iniciar una actividad en otra app mediante la descripción de una acción simple que desees realizar 
+                        (como "ver un mapa" o "tomar una foto") en un objeto Intent. Al llamar a startActivity() o startActivityForResult() y pasarle una 
+                        intent implícita, el sistema resuelve la intent en una aplicación que puede manejarla e iniciar su Activity correspondiente.</p>                                   
+                        
+					</div>
+				</div>
+                
+                <div class="col-lg-6 col-md-12 col-sm-12  text-center">
+                    
+                    <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img11.PNG"  align="center" width="430px" height="300px"> 
+                                        
+                </div>
+               
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+					<div class="inner-column">
+                    
+                    	<br/>
+                    
+                        <ul>
+                        	<li><p align="justify"><strong>Nota: </strong>Para verificar primero que exista una app para recibir la intent, llama a 
+                            resolveActivity() en tu objeto Intent. Si el resultado no es nulo, hay al menos una aplicación que puede administrar la intent 
+                            y es seguro llamar a startActivity(). Si el resultado es nulo, no debes usar la intent y, si es posible, debes inhabilitar la 
+                            función que la invoca.</p></li>
+
+                        </ul>                       	                                          
+                        
+					</div>
+				</div> 	
+                
+                <div class="col-lg-6 col-md-12 col-sm-12  text-center">
+                    
+                  <div class="inner-column">
+                    	
+                        <br/>
+                        
+						<p align="justify"><strong>Ejemplo</strong></p>
+                        <p align="justify"><strong>Crear una alarma</strong></p>
+                    <p align="justify">Para crear una alarma nueva, usa la acción ACTION_SET_ALARM y especifica detalles como la hora y el mensaje 
+                      con los extras definidos a continuación.</p>
+                        
+                  </div>
+                  
+                    <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img12.PNG"  align="center" width="430px" height="300px">
+                    
+                </div>          
+                
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+					
+                    <br/>
+                    <img src="../../../../../IMG/ImgGrupo2/Consulta2_Img13.PNG"  align="center" width="430px" height="500px">
+                        					
+				</div>             				
+                        
+		</div>
+        
+        <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+        
+            <br/>           
+            <hr style="size:4px" color="black" />
+            <br/>
+            
+        <!---------------------------------------------------------------------- SEPARADOR ----------------------------------------------------------->
+            
+ 
+            
+            
+
+    
 	</div>
 	<!-- End About -->
 	
